@@ -1,0 +1,5 @@
+<p>Hello, <span id="payload"></span></p>
+<script>
+    var metrics = JSON.parse('{{ payload | tojson | safe}}');
+    document.getElementById('payload').innerHTML = metrics.liquid;
+</script>
